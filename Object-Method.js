@@ -177,3 +177,12 @@ Object.freeze(permissions);
 // permissions.push("EXECUTE"); // Throws error in strict mode
 console.log(permissions);
 // Output: ['READ', 'WRITE']
+
+// 3. Array of Objects: Freeze an array containing objects
+const roles = Object.freeze([
+  { id: 1, title: "Admin" },
+  { id: 2, title: "Guest" },
+]);
+// roles.push({ id: 3, title: "User" }); // Blocked (Array is frozen)
+console.log(roles.length);
+// Output: 2
