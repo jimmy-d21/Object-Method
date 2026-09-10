@@ -26,3 +26,11 @@ function isObjectEmpty(obj) {
 }
 console.log(isObjectEmpty({})); // Output: true
 console.log(isObjectEmpty({ item: "Book" })); // Output: false
+
+// 5. Practical (Array of Objects): Form validation check across multiple inputs
+const formData = { username: "johndoe", email: "", password: "123" };
+const requiredFields = ["username", "email", "password"];
+
+const emptyFields = Object.keys(formData).filter((key) => !formData[key]);
+console.log(`Missing fields: ${emptyFields.join(", ")}`);
+// Output: "Missing fields: email"
