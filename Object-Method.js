@@ -229,3 +229,14 @@ scores2[0] = 85; // Allowed
 // scores.push(100); // Error: cannot add elements
 console.log(scores2);
 // Output: [85, 90, 95]
+
+// 3. Array of Objects: Seal individual items inside an array
+const inventory2 = [
+  { id: "A1", qty: 10 },
+  { id: "B2", qty: 20 },
+].map((item) => Object.seal(item));
+
+inventory2[0].qty = 15; // Allowed: update existing property
+inventory2[0].price = 5; // Blocked: cannot add new field
+console.log(inventory2[0]);
+// Output: { id: 'A1', qty: 15 }
