@@ -288,3 +288,9 @@ const car = Object.create(
 );
 console.log(car);
 // Output: { wheels: 4, brand: 'Ford' }
+
+// 3. Pure Dictionary Object: Create an object without any prototype (`null`)
+const pureMap = Object.create(null);
+pureMap.key = "Value";
+console.log(pureMap.toString);
+// Output: undefined (does not inherit Object.prototype methods!)
