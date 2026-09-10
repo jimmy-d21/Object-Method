@@ -19,3 +19,10 @@ const employees = [
 const headers = Object.keys(employees[0]);
 console.log(headers);
 // Output: ['id', 'name', 'department']
+
+// 4. Practical (Object): Check if an object is empty
+function isObjectEmpty(obj) {
+  return Object.keys(obj).length === 0;
+}
+console.log(isObjectEmpty({})); // Output: true
+console.log(isObjectEmpty({ item: "Book" })); // Output: false
