@@ -306,3 +306,26 @@ customList[0] = "First Item";
 customList.length = 1;
 console.log(customList.first());
 // Output: "First Item"
+
+// 5. Practical (Array of Objects): Factory function creating items sharing prototype methods
+const productPrototype = {
+  getDiscountPrice(discountPercent) {
+    return this.price * (1 - discountPercent);
+  },
+};
+
+function createProduct(id, name, price) {
+  const prod = Object.create(productPrototype);
+  prod.id = id;
+  prod.name = name;
+  prod.price = price;
+  return prod;
+}
+
+const productCatalog = [
+  createProduct(1, "Shirt", 50),
+  createProduct(2, "Pants", 80),
+];
+
+console.log(productCatalog[0].getDiscountPrice(0.1));
+// Output: 45
