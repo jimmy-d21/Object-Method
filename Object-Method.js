@@ -47,3 +47,9 @@ console.log(Object.values(scores));
 const fruits = ["apple", "banana", "cherry"];
 console.log(Object.values(fruits));
 // Output: ['apple', 'banana', 'cherry']
+
+// 3. Object with Numeric Values: Calculate total sum
+const cart = { item1: 19.99, item2: 5.5, item3: 12.0 };
+const total = Object.values(cart).reduce((sum, price) => sum + price, 0);
+console.log(`Total: $${total}`);
+// Output: Total: $37.49
