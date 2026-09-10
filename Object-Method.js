@@ -246,3 +246,19 @@ const user3 = { name: "Alex" };
 console.log(Object.isSealed(user3)); // Output: false
 Object.seal(user3);
 console.log(Object.isSealed(user3)); // Output: true
+
+// 5. Practical (Class/Object): Enforce rigid shape for class instances
+class UserSession {
+  constructor(userId, token) {
+    this.userId = userId;
+    this.token = token;
+    this.lastActive = Date.now();
+    Object.seal(this); // Lock shape so dynamic fields can't be added accidentally
+  }
+}
+
+const session = new UserSession(42, "abc-123");
+session.lastActive = Date.now(); // Works
+session.unauthorizedField = true; // Fails
+console.log(session.unauthorizedField);
+// Output: undefined
