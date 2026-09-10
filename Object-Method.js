@@ -63,3 +63,14 @@ const orders = [
 const allStatuses = orders.map((order) => Object.values(order)[1]);
 console.log(allStatuses);
 // Output: ['SHIPPED', 'PENDING', 'SHIPPED']
+
+// 5. Practical (Object): Search if any service state is failing
+const systemServices = {
+  authService: "HEALTHY",
+  dbService: "DOWN",
+  paymentGateway: "HEALTHY",
+};
+
+const hasFailure = Object.values(systemServices).includes("DOWN");
+console.log(hasFailure ? "System Warning!" : "All Operational");
+// Output: "System Warning!"
