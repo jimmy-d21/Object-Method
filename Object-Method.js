@@ -87,3 +87,9 @@ console.log(Object.entries(settings));
 const tags = ["js", "react", "node"];
 console.log(Object.entries(tags));
 // Output: [['0', 'js'], ['1', 'react'], ['2', 'node']]
+
+// 3. Object: Loop over object properties with for...of
+const inventory = { apples: 10, oranges: 5, bananas: 12 };
+for (const [fruit, count] of Object.entries(inventory)) {
+  console.log(`Stock: ${count} ${fruit}`);
+}
