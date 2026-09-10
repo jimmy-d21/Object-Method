@@ -93,3 +93,14 @@ const inventory = { apples: 10, oranges: 5, bananas: 12 };
 for (const [fruit, count] of Object.entries(inventory)) {
   console.log(`Stock: ${count} ${fruit}`);
 }
+
+// 4. Array of Objects: Convert an array of key-value pair objects back into a single object
+const configPairs = [
+  { key: "env", value: "production" },
+  { key: "port", value: 8080 },
+];
+const configObject = Object.fromEntries(
+  configPairs.map((item) => [item.key, item.value]),
+);
+console.log(configObject);
+// Output: { env: 'production', port: 8080 }
