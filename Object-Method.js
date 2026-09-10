@@ -82,3 +82,8 @@ console.log(hasFailure ? "System Warning!" : "All Operational");
 const settings = { theme: "dark", notifications: true };
 console.log(Object.entries(settings));
 // Output: [['theme', 'dark'], ['notifications', true]]
+
+// 2. Array: Get [index, value] pairs
+const tags = ["js", "react", "node"];
+console.log(Object.entries(tags));
+// Output: [['0', 'js'], ['1', 'react'], ['2', 'node']]
