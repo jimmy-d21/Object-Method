@@ -104,3 +104,11 @@ const configObject = Object.fromEntries(
 );
 console.log(configObject);
 // Output: { env: 'production', port: 8080 }
+
+// 5. Practical (Object): Filter object properties by value threshold
+const rawPrices = { laptop: 1200, mouse: 25, monitor: 300, cable: 10 };
+const premiumItems = Object.fromEntries(
+  Object.entries(rawPrices).filter(([_, price]) => price >= 100),
+);
+console.log(premiumItems);
+// Output: { laptop: 1200, monitor: 300 }
