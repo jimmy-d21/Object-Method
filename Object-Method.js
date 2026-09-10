@@ -122,3 +122,10 @@ const target = { a: 1 };
 const source = { b: 2, c: 3 };
 console.log(Object.assign(target, source));
 // Output: { a: 1, b: 2, c: 3 }
+
+// 2. Object: Shallow clone an object
+const user2 = { name: "Sarah", role: "Editor" };
+const clonedUser = Object.assign({}, user2);
+clonedUser.name = "Sarah Connor";
+console.log(user2);
+// Output: "Sarah" (Original untouched)
