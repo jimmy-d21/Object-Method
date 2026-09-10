@@ -192,3 +192,19 @@ const config = { api: "https://api.com" };
 console.log(Object.isFrozen(config)); // Output: false
 Object.freeze(config);
 console.log(Object.isFrozen(config)); // Output: true
+
+// 5. Practical (Object Enum): Immutable state constants for business logic
+const ORDER_STATUS = Object.freeze({
+  PENDING: "STATUS_PENDING",
+  PROCESSING: "STATUS_PROCESSING",
+  DELIVERED: "STATUS_DELIVERED",
+});
+
+function processOrder(status) {
+  if (status === ORDER_STATUS.DELIVERED) {
+    return "Order is complete.";
+  }
+  return "Order in progress.";
+}
+console.log(processOrder(ORDER_STATUS.DELIVERED));
+// Output: "Order is complete."
