@@ -112,3 +112,13 @@ const premiumItems = Object.fromEntries(
 );
 console.log(premiumItems);
 // Output: { laptop: 1200, monitor: 300 }
+
+// Object.assign()
+// Copies properties from one or more source objects into a target object.
+// Returns the modified target object.
+
+// 1. Simple Objects: Merge two objects
+const target = { a: 1 };
+const source = { b: 2, c: 3 };
+console.log(Object.assign(target, source));
+// Output: { a: 1, b: 2, c: 3 }
