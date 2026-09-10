@@ -294,3 +294,15 @@ const pureMap = Object.create(null);
 pureMap.key = "Value";
 console.log(pureMap.toString);
 // Output: undefined (does not inherit Object.prototype methods!)
+
+// 4. Array Prototype Inheritance: Inherit custom array-like behaviors
+const arrayLikeProto = {
+  first() {
+    return this[0];
+  },
+};
+const customList = Object.create(arrayLikeProto);
+customList[0] = "First Item";
+customList.length = 1;
+console.log(customList.first());
+// Output: "First Item"
