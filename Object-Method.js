@@ -10,3 +10,12 @@ console.log(Object.keys(user));
 const colors = ["red", "green", "blue"];
 console.log(Object.keys(colors));
 // Output: ['0', '1', '2']
+
+// 3. Array of Objects: Extract unique column header names for a data table
+const employees = [
+  { id: 1, name: "John", department: "Engineering" },
+  { id: 2, name: "Sarah", department: "Marketing" },
+];
+const headers = Object.keys(employees[0]);
+console.log(headers);
+// Output: ['id', 'name', 'department']
