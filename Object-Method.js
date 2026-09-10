@@ -34,3 +34,11 @@ const requiredFields = ["username", "email", "password"];
 const emptyFields = Object.keys(formData).filter((key) => !formData[key]);
 console.log(`Missing fields: ${emptyFields.join(", ")}`);
 // Output: "Missing fields: email"
+
+// Object.values()
+// Returns an array containing the values of an object's own enumerable properties.
+
+// 1. Simple Object: Extract values
+const scores = { math: 90, english: 85, science: 92 };
+console.log(Object.values(scores));
+// Output: [90, 85, 92]
