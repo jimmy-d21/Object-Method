@@ -135,3 +135,14 @@ const arr1 = ["a", "b"];
 const arr2 = ["c", "d"];
 console.log(Object.assign([], arr1, arr2));
 // Output: ['c', 'd']
+
+// 4. Array of Objects: Update specific objects in an array immutably
+const users = [
+  { id: 1, name: "Alice", active: false },
+  { id: 2, name: "Bob", active: false },
+];
+const updatedUsers = users.map((u) =>
+  u.id === 1 ? Object.assign({}, u, { active: true }) : u,
+);
+console.log(updatedUsers[0]);
+// Output: { id: 1, name: 'Alice', active: true }
