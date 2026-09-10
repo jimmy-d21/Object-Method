@@ -221,3 +221,11 @@ point.z = 30; // Blocked
 delete point.y; // Blocked
 console.log(point);
 // Output: { x: 15, y: 20 }
+
+// 2. Array: Seal an array (allows changing existing elements, blocks resize)
+const scores2 = [80, 90, 95];
+Object.seal(scores2);
+scores2[0] = 85; // Allowed
+// scores.push(100); // Error: cannot add elements
+console.log(scores2);
+// Output: [85, 90, 95]
