@@ -208,3 +208,16 @@ function processOrder(status) {
 }
 console.log(processOrder(ORDER_STATUS.DELIVERED));
 // Output: "Order is complete."
+
+// Object.seal()
+// Seals an object so new properties cannot be added or existing properties deleted.
+// However, existing properties can still be modified.
+
+// 1. Simple Object: Allow value updates, block property additions/deletions
+const point = { x: 10, y: 20 };
+Object.seal(point);
+point.x = 15; // Allowed
+point.z = 30; // Blocked
+delete point.y; // Blocked
+console.log(point);
+// Output: { x: 15, y: 20 }
