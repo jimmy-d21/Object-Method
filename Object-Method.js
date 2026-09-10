@@ -262,3 +262,18 @@ session.lastActive = Date.now(); // Works
 session.unauthorizedField = true; // Fails
 console.log(session.unauthorizedField);
 // Output: undefined
+
+// Object.create()
+// Creates a new object using another object as its prototype.
+
+// 1. Simple Object: Create object with prototype inheritance
+const animal = {
+  sound: "noise",
+  makeNoise() {
+    return this.sound;
+  },
+};
+const dog = Object.create(animal);
+dog.sound = "Woof";
+console.log(dog.makeNoise());
+// Output: "Woof"
