@@ -42,3 +42,8 @@ console.log(`Missing fields: ${emptyFields.join(", ")}`);
 const scores = { math: 90, english: 85, science: 92 };
 console.log(Object.values(scores));
 // Output: [90, 85, 92]
+
+// 2. Array: Extract elements (returns array values)
+const fruits = ["apple", "banana", "cherry"];
+console.log(Object.values(fruits));
+// Output: ['apple', 'banana', 'cherry']
