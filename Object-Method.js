@@ -74,3 +74,11 @@ const systemServices = {
 const hasFailure = Object.values(systemServices).includes("DOWN");
 console.log(hasFailure ? "System Warning!" : "All Operational");
 // Output: "System Warning!"
+
+// Object.entries()
+// Returns an array containing the key-value pairs of an object's own enumerable properties.
+
+// 1. Simple Object: Get key-value pairs as tuple arrays
+const settings = { theme: "dark", notifications: true };
+console.log(Object.entries(settings));
+// Output: [['theme', 'dark'], ['notifications', true]]
