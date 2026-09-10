@@ -129,3 +129,9 @@ const clonedUser = Object.assign({}, user2);
 clonedUser.name = "Sarah Connor";
 console.log(user2);
 // Output: "Sarah" (Original untouched)
+
+// 3. Array: Copy array values onto a target array/object
+const arr1 = ["a", "b"];
+const arr2 = ["c", "d"];
+console.log(Object.assign([], arr1, arr2));
+// Output: ['c', 'd']
