@@ -170,3 +170,10 @@ Object.freeze(constants);
 constants.PI = 3; // Fails
 console.log(constants.PI);
 // Output: 3.14159
+
+// 2. Array: Freeze an array to prevent push/pop/mutations
+const permissions = ["READ", "WRITE"];
+Object.freeze(permissions);
+// permissions.push("EXECUTE"); // Throws error in strict mode
+console.log(permissions);
+// Output: ['READ', 'WRITE']
