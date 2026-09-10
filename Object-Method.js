@@ -160,3 +160,13 @@ function createChart(customOptions) {
 const myChart = createChart({ width: 800, animate: false });
 console.log(myChart);
 // Output: { type: 'bar', width: 800, height: 400, animate: false }
+
+// Object.freeze()
+// Freezes an object so its properties cannot be added, removed, or changed.
+
+// 1. Simple Object: Lock property values
+const constants = { PI: 3.14159 };
+Object.freeze(constants);
+constants.PI = 3; // Fails
+console.log(constants.PI);
+// Output: 3.14159
