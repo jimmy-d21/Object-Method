@@ -53,3 +53,13 @@ const cart = { item1: 19.99, item2: 5.5, item3: 12.0 };
 const total = Object.values(cart).reduce((sum, price) => sum + price, 0);
 console.log(`Total: $${total}`);
 // Output: Total: $37.49
+
+// 4. Array of Objects: Flatten values from an array of record objects
+const orders = [
+  { id: 101, status: "SHIPPED" },
+  { id: 102, status: "PENDING" },
+  { id: 103, status: "SHIPPED" },
+];
+const allStatuses = orders.map((order) => Object.values(order)[1]);
+console.log(allStatuses);
+// Output: ['SHIPPED', 'PENDING', 'SHIPPED']
