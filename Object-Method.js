@@ -186,3 +186,9 @@ const roles = Object.freeze([
 // roles.push({ id: 3, title: "User" }); // Blocked (Array is frozen)
 console.log(roles.length);
 // Output: 2
+
+// 4. Object: Check if object/array is frozen
+const config = { api: "https://api.com" };
+console.log(Object.isFrozen(config)); // Output: false
+Object.freeze(config);
+console.log(Object.isFrozen(config)); // Output: true
