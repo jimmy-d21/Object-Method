@@ -240,3 +240,9 @@ inventory2[0].qty = 15; // Allowed: update existing property
 inventory2[0].price = 5; // Blocked: cannot add new field
 console.log(inventory2[0]);
 // Output: { id: 'A1', qty: 15 }
+
+// 4. Object: Inspect if sealed
+const user3 = { name: "Alex" };
+console.log(Object.isSealed(user3)); // Output: false
+Object.seal(user3);
+console.log(Object.isSealed(user3)); // Output: true
