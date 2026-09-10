@@ -146,3 +146,17 @@ const updatedUsers = users.map((u) =>
 );
 console.log(updatedUsers[0]);
 // Output: { id: 1, name: 'Alice', active: true }
+
+// 5. Practical (Object): Merge default configuration with custom options
+function createChart(customOptions) {
+  const defaultOptions = {
+    type: "bar",
+    width: 600,
+    height: 400,
+    animate: true,
+  };
+  return Object.assign({}, defaultOptions, customOptions);
+}
+const myChart = createChart({ width: 800, animate: false });
+console.log(myChart);
+// Output: { type: 'bar', width: 800, height: 400, animate: false }
