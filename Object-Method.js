@@ -277,3 +277,14 @@ const dog = Object.create(animal);
 dog.sound = "Woof";
 console.log(dog.makeNoise());
 // Output: "Woof"
+
+// 2. Object with Property Descriptors: Create object and set descriptors
+const car = Object.create(
+  {},
+  {
+    wheels: { value: 4, enumerable: true },
+    brand: { value: "Ford", enumerable: true },
+  },
+);
+console.log(car);
+// Output: { wheels: 4, brand: 'Ford' }
