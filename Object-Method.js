@@ -363,3 +363,21 @@ const recordsWithTags = records.filter((item) =>
 );
 console.log(recordsWithTags.length);
 // Output: 2
+
+// 5. Practical (Object): Safe payload parsing (Prototype Pollution Defense)
+function extractAllowedData(inputData, allowedKeys) {
+  const cleanData = {};
+  for (const key of allowedKeys) {
+    // Check direct property presence to avoid reading untrusted prototype properties
+    if (Object.hasOwnProperty(inputData, key)) {
+      cleanData[key] = inputData[key];
+    }
+  }
+  return cleanData;
+}
+
+const payload = Object.create({ maliciousProto: true });
+payload.username = "alice_dev";
+
+console.log(extractAllowedData(payload, ["username", "maliciousProto"]));
+// Output: { username: 'alice_dev' }
