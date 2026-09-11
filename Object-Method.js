@@ -401,3 +401,14 @@ const parent2 = { role: "base" };
 const child = Object.create(parent2);
 console.log(Object.getPrototypeOf(child) === parent2);
 // Output: true
+
+// 4. Array of Objects: Inspect common prototype of instances in an array
+class Task {
+  constructor(title) {
+    this.title = title;
+  }
+}
+const taskList = [new Task("Task 1"), new Task("Task 2")];
+
+console.log(Object.getPrototypeOf(taskList[0]) === Task.prototype);
+// Output: true
