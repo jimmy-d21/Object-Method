@@ -343,3 +343,11 @@ console.log(Object.hasOwnProperty(user4, "toString")); // Output: false (inherit
 const items = ["A", "B", "C"];
 console.log(Object.hasOwnProperty(items, 1)); // Output: true
 console.log(Object.hasOwnProperty(items, 5)); // Output: false
+
+// 3. Inherited Object: Differentiate own properties from prototype properties
+const parent = { inherited: "from parent" };
+const child = Object.create(parent);
+child.ownField = "from child";
+
+console.log(Object.hasOwnProperty(child, "ownField")); // Output: true
+console.log(Object.hasOwnProperty(child, "inherited")); // Output: false
