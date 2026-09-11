@@ -395,3 +395,9 @@ console.log(Object.getPrototypeOf(obj) === Object.prototype);
 const arr = [1, 2, 3];
 console.log(Object.getPrototypeOf(arr) === Array.prototype);
 // Output: true
+
+// 3. Object.create(): Verify prototype reference
+const parent2 = { role: "base" };
+const child = Object.create(parent2);
+console.log(Object.getPrototypeOf(child) === parent2);
+// Output: true
