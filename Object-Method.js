@@ -329,3 +329,12 @@ const productCatalog = [
 
 console.log(productCatalog[0].getDiscountPrice(0.1));
 // Output: 45
+
+// Object.hasOwnProperty()
+// Checks whether an object has a specified property as its own property.
+// Returns true if the property exists directly on the object; otherwise, returns false.
+
+// 1. Simple Object: Check direct property ownership
+const user4 = { name: "David" };
+console.log(Object.hasOwnProperty(user4, "name")); // Output: true
+console.log(Object.hasOwnProperty(user4, "toString")); // Output: false (inherited from prototype)
