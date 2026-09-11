@@ -390,3 +390,8 @@ console.log(extractAllowedData(payload, ["username", "maliciousProto"]));
 const obj = {};
 console.log(Object.getPrototypeOf(obj) === Object.prototype);
 // Output: true
+
+// 2. Array: Get prototype of an array
+const arr = [1, 2, 3];
+console.log(Object.getPrototypeOf(arr) === Array.prototype);
+// Output: true
