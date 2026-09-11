@@ -351,3 +351,15 @@ child.ownField = "from child";
 
 console.log(Object.hasOwnProperty(child, "ownField")); // Output: true
 console.log(Object.hasOwnProperty(child, "inherited")); // Output: false
+
+// 4. Array of Objects: Filter objects that contain specific own properties
+const records = [
+  { id: 1, tags: ["tech"] },
+  { id: 2 },
+  { id: 3, tags: ["news"] },
+];
+const recordsWithTags = records.filter((item) =>
+  Object.hasOwnProperty(item, "tags"),
+);
+console.log(recordsWithTags.length);
+// Output: 2
