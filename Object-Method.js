@@ -412,3 +412,15 @@ const taskList = [new Task("Task 1"), new Task("Task 2")];
 
 console.log(Object.getPrototypeOf(taskList[0]) === Task.prototype);
 // Output: true
+
+// 5. Practical: Traversed Multi-level Class Inheritance Chain
+class Vehicle {}
+class Car extends Vehicle {}
+
+const myCar = new Car();
+
+const directProto = Object.getPrototypeOf(myCar);
+const parentProto = Object.getPrototypeOf(directProto);
+
+console.log(directProto === Car.prototype); // Output: true
+console.log(parentProto === Vehicle.prototype); // Output: true
