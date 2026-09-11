@@ -381,3 +381,12 @@ payload.username = "alice_dev";
 
 console.log(extractAllowedData(payload, ["username", "maliciousProto"]));
 // Output: { username: 'alice_dev' }
+
+// Object.getPrototypeOf()
+// Returns the prototype of a specified object.
+// The prototype is the object from which the specified object inherits properties and methods.
+
+// 1. Simple Object: Get prototype of plain object
+const obj = {};
+console.log(Object.getPrototypeOf(obj) === Object.prototype);
+// Output: true
