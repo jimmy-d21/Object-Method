@@ -338,3 +338,8 @@ console.log(productCatalog[0].getDiscountPrice(0.1));
 const user4 = { name: "David" };
 console.log(Object.hasOwnProperty(user4, "name")); // Output: true
 console.log(Object.hasOwnProperty(user4, "toString")); // Output: false (inherited from prototype)
+
+// 2. Array: Check if index exists as own property
+const items = ["A", "B", "C"];
+console.log(Object.hasOwnProperty(items, 1)); // Output: true
+console.log(Object.hasOwnProperty(items, 5)); // Output: false
